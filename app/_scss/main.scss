@@ -57,7 +57,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 13px; line-height: 1.4; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -431,6 +431,10 @@ div.append-bottom-half, .append-bottom-half {margin-bottom:30px;}
    Author: Michael foley
    ========================================================================== */
 
+*,:after,:before{
+  box-sizing:border-box
+}
+
 a, a:visited { 
 	color: #5dbfc8; 
 	text-decoration:none;
@@ -595,7 +599,7 @@ nav .title, .scroll-top, .floating_nav {
 }
 blockquote {
 	color:#a18868;
-	font-size:2em;
+	font-size:1.8em;
 	margin:0;
 }
 blockquote span {
@@ -615,9 +619,8 @@ blockquote span {
 	color:#bc1040; 
 }
 #main p {
-	padding:0 0 10px 0;
+	padding:0 0 15px 0;
 	margin:0;
-	font-size:.9em;
 }
 #main p.event-title {
 	padding-bottom:7px;
@@ -660,14 +663,14 @@ blockquote span {
 	margin-left:20px;
 }
 .callout_box {
-	background:#399FA8;
-	padding:8px 17px 6px 17px;
-	display:inline-block;
-	margin-bottom:10px;
+	background: #399FA8;
+	padding: 8px 17px 6px 17px;
 }
 .callout {
-	font-family:'KenyanCoffeeRegular', 'Arial Narrow', Arial, Helvetica, sans-serif; 
-	font-size:1.9em;
+	font-family: 'KenyanCoffeeRegular', 'Arial Narrow', Arial, Helvetica, sans-serif; 
+	font-size: 1.9em;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 .callout span{
 	color: #1f2437;
@@ -719,7 +722,6 @@ blockquote span {
 /* ==|== Mail Chimp ======================================== */
 
 #mc_embed_signup { 
-	text-align:right; 
 	overflow: hidden;
 	margin-top:7px;
 }
@@ -732,7 +734,7 @@ blockquote span {
 	border:0;
 }
 #mc_embed_signup input[type=email] {
-	width: 289px;
+	width: 460px;
 	border: solid 1px #d0d0d0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -826,8 +828,8 @@ a.mce-button:not(.inactive):active {
 .mce-info, p.mce-info {
 	background-color:transparent;
 	border:0;
-	padding: 10px 0;
-	text-align: center;
+	padding: 10px 7px;
+	text-align: left;
 	display: block;
 	overflow: hidden;
 	clear: both;
@@ -1324,9 +1326,6 @@ header .title {
 header .date { 
 	font-size:2.2em;
 }
-#mc_embed_signup input[type=email] {
-	width: 200px !important;
-}
 }
 
 @media screen and (max-width: 480px) and (orientation:landscape) {
@@ -1338,9 +1337,6 @@ header .location {
 header .title { 
 	font-size:4em; 
 	line-height:1em;
-}
-#mc_embed_signup input[type=email] {
-	width: 200px;
 }
 #main p, #main p.large_text, #main .sponsors p {
 	font-size:.7em;
@@ -1364,8 +1360,8 @@ footer {
 }
 
 .container {
-	width:95%;
-	margin:0 15px;
+	width: auto;
+	margin: 0 15px;
 }
 .column,.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10,.span-11,.span-12,.span-13,.span-14,.span-15,.span-16,.span-17,.span-18,.span-19,.span-20,.span-21,.span-22,.span-23,.span-24 {
 	float:none;
@@ -1457,8 +1453,18 @@ article.reveal {
 .video_links  {
 	display:inline;
 }
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+
+#mc-embedded-subscribe-form {
+  margin-bottom: 15px;
+}
+#mc_embed_signup input[type=email] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#mc_embed_signup fieldset,
+a.mce-button {
+  float: none;
+}
 }
 
 
