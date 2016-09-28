@@ -597,6 +597,9 @@ nav .title, .scroll-top, .floating_nav {
 .floating_nav li {
 	font-size:2.2em;
 }
+.mobile-only {
+  display: none;
+}
 blockquote {
 	color:#a18868;
 	font-size:1.8em;
@@ -1368,7 +1371,7 @@ footer {
 	padding-right:0;
 	width:100%;
 }
-#header_image,iframe,.cal,#quote,nav,#mark_cal,#coverage,#wpix,.coverage {
+#header_image,iframe,.cal,#quote,nav,#mark_cal,#coverage,#wpix,.coverage,.video-label {
 	display:none !important;
 }
 .border_left,.border_right {
@@ -1427,11 +1430,13 @@ header .title {
 	background:transparent;
 	padding-left:0;
 }
-header .date {
-	padding-bottom:70px;
-}
-article.reveal {
-	display:none;
+.mobile-only {
+  display: block;
+  text-align: center;
+  
+  .callout_box {
+    display: block;
+  }
 }
 #mercantile,#stepping_out {
 	display:block;

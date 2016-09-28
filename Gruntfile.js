@@ -401,9 +401,7 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     'sass:server',
-    'coffeelint:check',
     'coffee:dist',
-    'jshint:all',
     'csslint:check'
     // 'scsslint'
   ]);
