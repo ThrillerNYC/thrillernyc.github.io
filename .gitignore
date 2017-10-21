@@ -36,6 +36,7 @@ Thumbs.db
 app/_bower_components
 dist
 node_modules
+vendor
 .tmp
 
 # Ignore for RVM users #
