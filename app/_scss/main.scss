@@ -760,16 +760,16 @@ div#mce-error-response, div#mce-success-response {
   top:0;
   left:0;
   width:100%;
-  z-index:1001;
-}
-div#mce-error-response p, div#mce-success-response p {
-  padding:20px 40px 0px 40px;
   margin:0;
+  padding:20px 40px;
   text-align:center;
   font-size: 1.7em;
+  z-index:1001;
+}
+div#mce-error-response {
   color:#bc1040;
 }
-div#mce-success-response p {
+div#mce-success-response {
   color:#399FA8;
 }
 div.mce_inline_error {display:none !important;}

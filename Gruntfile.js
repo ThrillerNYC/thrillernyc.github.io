@@ -65,6 +65,7 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
+          https: true,
           watchTask: true
         }
       },
@@ -146,7 +147,7 @@ module.exports = function (grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions']
+        browsers: ['last 2 version', '> 1%', 'Firefox ESR']
       },
       dist: {
         expand: true,
