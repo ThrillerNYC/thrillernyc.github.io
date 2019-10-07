@@ -383,6 +383,70 @@ p {
   margin: 0 0 0.5rem;
 }
 
+.regform__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.regform__input {
+  flex-grow: 1;
+}
+
+.regform__text {
+  border: 3px solid #4c5683;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
+  margin: 0.5em 0;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  transition: border 0.3s ease-out;
+}
+.regform__text::selection {
+  background: #4c5683;
+  color: #fff;
+}
+
+.regform__button {
+  border: 3px solid #4c5683;
+  border-radius: 0.3rem;
+  font-size: 1em;
+  margin: 0.5em 0;
+  padding: 0.5rem 0.8rem;
+}
+
+.regform__button--submit {
+  background: #5dbfc8;
+  color: #fff;
+  transition: border-color 0.3s ease-out;
+}
+.regform__text.regform__error {
+  border-bottom-color: #bc1040;
+}
+
+div.regform__error {
+  color: #eb1450;
+}
+
+@media (min-width: 30rem) {
+  .regform__control-group {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .regform__control-group .regform__text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+  }
+  .regform__control-group .regform__button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+  }
+}
+
 .footer {
   font-size: 0.8em;
   text-align: center;
