@@ -421,11 +421,11 @@ p {
   color: #fff;
   transition: border-color 0.3s ease-out;
 }
-.regform__text.regform__error {
+.regform__text.regform__input--error {
   border-bottom-color: #bc1040;
 }
 
-div.regform__error {
+.regform__error {
   color: #eb1450;
 }
 
