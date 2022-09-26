@@ -76,8 +76,6 @@ iframe {
 a {
   color: #5dbfc8;
   text-decoration: none;
-  -webkit-transition: color 0.25s ease-out, background 0.25s ease-out;
-  -o-transition: color 0.25s ease-out, background 0.25s ease-out;
   transition: color 0.25s ease-out, background 0.25s ease-out;
 }
 
@@ -146,13 +144,9 @@ p {
 }
 @media (min-width: 37rem) {
   .header {
-    display: -ms-grid;
     display: grid;
     grid-column-gap: 3rem;
-    -ms-grid-columns: [image] 3rem 1fr 3rem [content] 3rem 1.5fr;
     grid-template-columns: [image] 1fr [content] 1.5fr;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
@@ -164,7 +158,6 @@ p {
 @media (min-width: 60rem) {
   .header {
     font-size: 1em;
-    -ms-grid-columns: [image] 24rem [content] 1fr;
     grid-template-columns: [image] 24rem [content] 1fr;
   }
 }
@@ -184,8 +177,6 @@ p {
   }
   .header__image {
     grid-column: image;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
     margin: 0;
     width: 22rem;
@@ -231,14 +222,10 @@ p {
   }
 }
 .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "KenyanCoffee", sans-serif;
   font-size: 2.5em;
   list-style: none;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 -1rem;
   padding: 0.2rem 0;
@@ -259,39 +246,32 @@ p {
   display: block;
   width: 20rem;
   margin: 0.5rem 0 -2.5rem auto;
-  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 @media (min-width: 35rem) {
   .section--pullquote {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [content] 1fr [image] 1fr;
     grid-template-columns: [content] 1fr [image] 1fr;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 
   .lyrics {
-    column-count: 2;
-    column-gap: 2rem;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 @media (min-width: 45rem) {
   .section {
-    display: -ms-grid;
     display: grid;
     grid-gap: 2rem;
-    -ms-grid-columns: [title] 2rem 10rem 2rem [content] 2rem 1fr;
     grid-template-columns: [title] 10rem [content] 1fr;
   }
   .section--about {
-    -ms-grid-columns: [title] 10rem [content] 1fr [cta] 12rem;
     grid-template-columns: [title] 10rem [content] 1fr [cta] 12rem;
   }
   .section--schedule {
-    -ms-grid-columns: [title] 1fr;
     grid-template-columns: [title] 1fr;
   }
   .section--dance {
@@ -300,27 +280,25 @@ p {
       "title videos";
   }
   .section--pullquote {
-    -ms-grid-columns: [content] 1fr [image] 1fr;
     grid-template-columns: [content] 1fr [image] 1fr;
   }
 }
 @media (min-width: 60rem) {
   .section {
-    -ms-grid-columns: [title] 2rem 20rem 2rem [content] 2rem 1fr;
     grid-template-columns: [title] 20rem [content] 1fr;
   }
   .section--about {
-    -ms-grid-columns: [title] 20rem [content] 1fr [cta] 12rem;
     grid-template-columns: [title] 20rem [content] 1fr [cta] 12rem;
   }
   .section--schedule {
-    -ms-grid-columns: [title] 1fr;
     grid-template-columns: [title] 1fr;
   }
   .section--pullquote {
-    -ms-grid-columns: [content] 2fr [image] 1fr;
     grid-template-columns: [content] 2fr [image] 1fr;
   }
+}
+.prereg .section--about .section__content {
+  grid-column: 2 / 4
 }
 .section__title {
   font-family: "KenyanCoffee", sans-serif;
@@ -331,7 +309,6 @@ p {
 }
 
 .section__videos {
-  display: -ms-grid;
   display: grid;
   grid-gap: 2rem;
   grid-column: videos;
@@ -342,15 +319,12 @@ p {
 }
 @media (min-width: 45rem) {
   .section__videos .section__videos--multiple {
-    -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 }
 
 .events {
-  display: -ms-grid;
   display: grid;
   grid-gap: 3rem 0.7rem;
   list-style: none;
@@ -364,7 +338,6 @@ p {
 @media (min-width: 45rem) {
   .events {
     background: rgba(207, 194, 135, 0.6);
-    -ms-grid-columns: 1fr 0.7rem 1fr 0.7rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 -2rem;
   }
@@ -418,6 +391,10 @@ p {
   padding: 0.5rem 0.8rem;
   width: 100%;
   transition: border 0.3s ease-out;
+}
+.regform__text::-moz-selection {
+  background: #4c5683;
+  color: #fff;
 }
 .regform__text::selection {
   background: #4c5683;
