@@ -382,6 +382,7 @@ p {
 }
 
 .regform__text {
+  background: #e8ebf3;
   border: 3px solid #4c5683;
   border-radius: 0.3rem;
   box-sizing: border-box;
@@ -401,7 +402,8 @@ p {
   color: #fff;
 }
 
-.regform__button {
+.regform__button,
+.tito-widget .tito-form-actions .tito-submit {
   border: 3px solid #4c5683;
   border-radius: 0.3rem;
   font-size: 1em;
@@ -409,11 +411,27 @@ p {
   padding: 0.5rem 0.8rem;
 }
 
-.regform__button--submit {
+.regform__button--submit,
+.tito-widget .tito-form-actions .tito-submit {
   background: #5dbfc8;
   color: #fff;
   transition: border-color 0.3s ease-out;
 }
+
+.tito-widget .tito-form-actions .tito-submit {
+  height: unset;
+  line-height: normal;
+  border-width: 2px;
+}
+
+.regform__button--submit:hover,
+.regform__button--submit:focus,
+.tito-widget .tito-form-actions .tito-submit:hover,
+.tito-widget .tito-form-actions .tito-submit:focus {
+  background: #bc1040;
+  color: #e8ebf3;
+}
+
 .regform__text.regform__input--error {
   border-bottom-color: #bc1040;
 }
@@ -448,4 +466,30 @@ p {
 
 .footer address {
   display: inline-block;
+}
+
+/** Tito widget **/
+.tito-widget {
+  font-family: unset;
+  margin-top: 0
+}
+
+.tito-widget .tito-widget-form {
+  background: #e8ebf3;
+  border: 3px solid #4c5683;
+  border-radius: 0.3rem;
+}
+
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--decrement-quantity > a, 
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--increment-quantity > a {
+  color:#4c5683;
+}
+
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--decrement-quantity > a:hover, 
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--increment-quantity > a:hover,
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--decrement-quantity > a:focus, 
+.tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--increment-quantity > a:focus {
+  color:#5dbfc8;
+  background: unset;
+  transition: color 0.25s ease-out;
 }
