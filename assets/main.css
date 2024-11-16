@@ -281,9 +281,9 @@ p {
     grid-template-columns: [title] 10rem [content] 1fr [cta] 12rem;
   }
 
-  .section--schedule {
+  /* .section--schedule {
     grid-template-columns: [title] 1fr;
-  }
+  } */
 
   .section--dance {
     grid-template-areas:
