@@ -437,6 +437,7 @@ p {
 }
 
 .regform__button,
+.tito-register-interest-form button,
 .tito-widget .tito-form-actions .tito-submit {
   border: 3px solid #4c5683;
   border-radius: 0.3rem;
@@ -446,12 +447,15 @@ p {
 }
 
 .regform__button--submit,
+.tito-register-interest-form button,
 .tito-widget .tito-form-actions .tito-submit {
   background: #5dbfc8;
   color: #fff;
   transition: border-color 0.3s ease-out;
 }
 
+
+.tito-register-interest-form button,
 .tito-widget .tito-form-actions .tito-submit {
   height: unset;
   line-height: normal;
@@ -460,6 +464,8 @@ p {
 
 .regform__button--submit:hover,
 .regform__button--submit:focus,
+.tito-register-interest-form button:hover,
+.tito-register-interest-form button:focus,
 .tito-widget .tito-form-actions .tito-submit:hover,
 .tito-widget .tito-form-actions .tito-submit:focus {
   background: #bc1040;
@@ -509,7 +515,8 @@ p {
 }
 
 /** Tito widget **/
-.tito-widget {
+.tito-widget,
+.tito-register-interest-form {
   font-family: unset;
   margin-top: 0
 }
@@ -518,6 +525,21 @@ p {
   background: #e8ebf3;
   border: 3px solid #4c5683;
   border-radius: 0.3rem;
+}
+
+.tito-register-interest-form label {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tito-register-interest-form label svg {
+  display: none;
+}
+
+.tito-register-interest-form input {
+  flex-grow: 1
 }
 
 .tito-widget .tito-widget-form .tito-release .tito-quantity .tito-release--decrement-quantity>a,
